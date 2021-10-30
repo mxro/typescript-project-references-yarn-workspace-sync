@@ -1,21 +1,46 @@
-# Goldstack Project Root
+# Typescript Project References Yarn Workspace Sync
 
-The root of the project contains configuration shared across modules as well as various utility scripts for applying operations for all modules.
+This project demonstrates the use of the utility [utils-typescript-references](https://github.com/goldstack/goldstack/tree/master/workspaces/templates-lib/packages/utils-typescript-references#readme).
 
-You can find the modules you have selected in the folder `packages/`.
+This project contains seven packages:
 
-Find further information here:
+```
+packages/app-nextjs
+packages/app-nextjs-bootstrap
+packages/email-send
+packages/lambda-express
+packages/lambda-go-gin
+packages/s3
+packages/static-website-aw
+```
 
-- [Project Configuration](https://docs.goldstack.party/docs/goldstack/configuration)
-- [Getting Started](https://docs.goldstack.party/docs/goldstack/getting-started)
-- [Security Hardening](https://docs.goldstack.party/docs/goldstack/security-hardening)
+And there are two inter-project dependencies between packages:
 
-## Notes
+```
+app-next-bootstrap -> lambda-express
+lambda-express -> s3
+```
 
-### Max ListenersExceededWarning on `compile-watch` command
+Using the `utils-typescript-references` tool, the [TypeScript project references](https://www.typescriptlang.org/docs/handbook/project-references.html) in the respective `tsconfig.json` files for the packages are updated, for example:
 
-When running the `compile-watch` command in the root, you may get the following warning:
 
-    (node:97874) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 SIGINT listeners added to [process]. Use emitter.setMaxListeners() to increase limit
+[app-nextjs-bootstrap/tsconfig.json](https://github.com/mxro/typescript-project-references-yarn-workspace-sync/blob/master/packages/app-nextjs-bootstrap/tsconfig.json#L23)
 
-This is nothing to worry about. It is caused by the command spawning a lot of subprocesses, since an individuall `nodemon` process is started for every package that is watched (see also [this question](https://stackoverflow.com/questions/9768444/possible-eventemitter-memory-leak-detected) on stackoverflow.
+You can add or remove dependencies between the packages in this project by using `yarn`. For instance, to establish a reference between `lambda-express` and `email-send` do the following
+
+```
+cd packages/lambda-express
+yarn add email-send
+```
+
+Following this, update the project references:
+
+```
+cd ../..
+yarn fix-project-references
+```
+
+This will update the `tsconfig.json` for the `lambda-express` package and include the references to the `email-send` package.
+
+This project was created using the [Goldstack Project Builder](https://goldstack.party). For more background around syncing project references and Yarn workspaces, also see the following blog post: 
+
