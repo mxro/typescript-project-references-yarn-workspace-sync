@@ -1,0 +1,19 @@
+{
+  "$schema": "./schemas/package.schema.json",
+  "name": "email-send",
+  "template": "email-send",
+  "templateVersion": "0.1.74",
+  "configuration": {},
+  "deployments": [
+    {
+      "name": "prod",
+      "configuration": {
+        "domain": "test-ts-email.tests.dev.goldstack.party",
+        "hostedZoneDomain": "dev.goldstack.party"
+      },
+      "awsUser": "awsUser",
+      "awsRegion": "us-west-2",
+      "tfStateKey": "email-send-prod-355d907dda362652cea6.tfstate"
+    }
+  ]
+}

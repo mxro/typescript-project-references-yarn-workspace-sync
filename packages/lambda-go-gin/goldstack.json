@@ -1,0 +1,21 @@
+{
+  "$schema": "./schemas/package.schema.json",
+  "name": "lambda-go-gin",
+  "template": "lambda-go-gin",
+  "templateVersion": "0.1.34",
+  "configuration": {},
+  "deployments": [
+    {
+      "name": "prod",
+      "configuration": {
+        "cors": "https://test-ts-nextjs-bootstrap.tests.dev.goldstack.party",
+        "lambdaName": "test-ts-go-lambda-tests",
+        "apiDomain": "test-ts-go-api.tests.dev.goldstack.party",
+        "hostedZoneDomain": "dev.goldstack.party"
+      },
+      "awsUser": "awsUser",
+      "awsRegion": "us-west-2",
+      "tfStateKey": "lambda-go-gin-prod-6dbd76b3f6c465281a53.tfstate"
+    }
+  ]
+}

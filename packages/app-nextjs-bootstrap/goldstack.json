@@ -1,0 +1,21 @@
+{
+  "$schema": "./schemas/package.schema.json",
+  "name": "app-nextjs-bootstrap",
+  "template": "app-nextjs-bootstrap",
+  "templateVersion": "0.1.74",
+  "configuration": {},
+  "deployments": [
+    {
+      "name": "prod",
+      "configuration": {
+        "defaultCacheDuration": 10,
+        "hostedZoneDomain": "dev.goldstack.party",
+        "websiteDomain": "test-ts-nextjs-bootstrap.tests.dev.goldstack.party",
+        "websiteDomainRedirect": "www.test-ts-nextjs-bootstrap.tests.dev.goldstack.party"
+      },
+      "awsUser": "awsUser",
+      "awsRegion": "us-west-2",
+      "tfStateKey": "app-nextjs-bootstrap-prod-ffc6d6f732445ace9fa3.tfstate"
+    }
+  ]
+}

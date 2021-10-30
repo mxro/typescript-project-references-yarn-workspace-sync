@@ -1,0 +1,21 @@
+{
+  "$schema": "./schemas/package.schema.json",
+  "name": "lambda-express",
+  "template": "lambda-express",
+  "templateVersion": "0.1.120",
+  "configuration": {},
+  "deployments": [
+    {
+      "name": "prod",
+      "configuration": {
+        "lambdaName": "test-ts-lambda-tests",
+        "apiDomain": "test-ts-lambda.tests.dev.goldstack.party",
+        "hostedZoneDomain": "dev.goldstack.party",
+        "cors": "test-ts-nextjs-bootstrap.tests.dev.goldstack.party"
+      },
+      "awsUser": "awsUser",
+      "awsRegion": "us-west-2",
+      "tfStateKey": "lambda-express-prod-b562b85417231e92463a.tfstate"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "ES2019",
+    "module": "commonjs",
+    "lib": [
+      "dom",
+      "ESNext"
+    ],
+    "allowJs": true,
+    "checkJs": false,
+    "composite": true,
+    "noEmit": false,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "useUnknownInCatchVariables": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": [
+      "jest",
+      "node"
+    ]
+  },
+  "include": [],
+  "references": [
+    {
+      "path": "packages/app-nextjs",
+      "name": "app-nextjs"
+    },
+    {
+      "path": "packages/app-nextjs-bootstrap",
+      "name": "app-nextjs-bootstrap"
+    },
+    {
+      "path": "packages/email-send",
+      "name": "email-send"
+    },
+    {
+      "path": "packages/lambda-express",
+      "name": "lambda-express"
+    },
+    {
+      "path": "packages/lambda-go-gin",
+      "name": "lambda-go-gin"
+    },
+    {
+      "path": "packages/s3",
+      "name": "s3-bucket-test-ts"
+    },
+    {
+      "path": "packages/static-website-aws",
+      "name": "static-website-aws"
+    }
+  ]
+}

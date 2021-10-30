@@ -1,0 +1,21 @@
+{
+  "$schema": "./schemas/package.schema.json",
+  "name": "static-website-aws",
+  "template": "static-website-aws",
+  "templateVersion": "0.1.90",
+  "configuration": {},
+  "deployments": [
+    {
+      "name": "prod",
+      "configuration": {
+        "defaultCacheDuration": 10,
+        "hostedZoneDomain": "dev.goldstack.party",
+        "websiteDomain": "test-ts-static-website.tests.dev.goldstack.party",
+        "websiteDomainRedirect": "www.test-ts-static-website.tests.dev.goldstack.party"
+      },
+      "awsUser": "awsUser",
+      "awsRegion": "us-west-2",
+      "tfStateKey": "static-website-aws-prod-724905ce96492f9420a9.tfstate"
+    }
+  ]
+}

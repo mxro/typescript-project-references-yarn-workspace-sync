@@ -1,0 +1,51 @@
+{
+  "packages": [
+    {
+      "packageName": "app-nextjs",
+      "templateReference": {
+        "templateName": "app-nextjs"
+      }
+    },
+    {
+      "packageName": "app-nextjs-bootstrap",
+      "templateReference": {
+        "templateName": "app-nextjs-bootstrap"
+      }
+    },
+    {
+      "packageName": "lambda-express",
+      "templateReference": {
+        "templateName": "lambda-express"
+      }
+    },
+    {
+      "packageName": "s3",
+      "templateReference": {
+        "templateName": "s3"
+      }
+    },
+    {
+      "packageName": "static-website-aws",
+      "templateReference": {
+        "templateName": "static-website-aws"
+      }
+    },
+    {
+      "packageName": "email-send",
+      "templateReference": {
+        "templateName": "email-send"
+      }
+    },
+    {
+      "packageName": "lambda-go-gin",
+      "templateReference": {
+        "templateName": "lambda-go-gin"
+      }
+    }
+  ],
+  "rootTemplateReference": {
+    "templateName": "yarn-pnp-monorepo"
+  },
+  "createdAt": "2021-10-29T20:10:09.756Z",
+  "projectName": "testing-ts-ref"
+}
