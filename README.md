@@ -42,5 +42,7 @@ yarn fix-project-references
 
 This will update the `tsconfig.json` for the `lambda-express` package and include the references to the `email-send` package.
 
-This project was created using the [Goldstack Project Builder](https://goldstack.party). For more background around syncing project references and Yarn workspaces, also see the following blog post: 
+This project was created using the [Goldstack Project Builder](https://goldstack.party). For more background around syncing project references and Yarn workspaces, also see the following blog post:
+
+[Update TypeScript Project References for Yarn Workspaces - magically!](https://maxrohde.com/2021/10/30/update-typescript-project-references-for-yarn-workspaces-magically/)
 
